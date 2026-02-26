@@ -37,18 +37,30 @@ function App() {
 
   return (
     <>
-      <div className='h-screen bg-zinc-800 text-white flex items-center justify-center'>
-        <form onSubmit={handleSubmit} className='bg-zinc-900 p-10'>
-          <h1 className='text-2xl font-bold my-2'>Chat utn</h1>
-          <input type="text" placeholder='Mensaje' className='border-2 border-zinc-500 p-2 w-full text-white'
-            onChange={(e) => setMessage(e.target.value)}></input>
-          <button>Enviar</button>
-          <ul>
-            {messages.map((message, i) => (
-              <li key={i}
-                className={`{my-2 p-2 table text-sm rounded-md ${message.from == 'Me' ? `bg-sky-700` : `bg-black ml-auto`}`}>{message.from}:{message.body}</li>
-            ))}
-          </ul>
+      <div className='w-full m-10 p-10'>
+        <form onSubmit={handleSubmit} className='bg-white shadow-lg rounded-lg max-w-md'>
+          <div className='border-b-1 px-2 py-4'>
+            <div className='inline-flex items-center'>
+              <img src="https://images.seeklogo.com/logo-png/27/1/snap-svg-logo-png_seeklogo-273905.png" alt="Logo" className='w-8' />
+              <span className='ml-8'>Chat</span>
+            </div>
+          </div>
+          <div className='h-80 flex flex-col mex-w-md px-2 mb-2  mt-2'>
+            <ul>
+              {messages.map((message, i) => (
+                <li key={i}
+                  className={`{my-4 p-2 table text-sm rounded-md mb-2 text-white ${message.from == 'Me' ? `bg-blue-500` : `bg-gray-500 ml-auto`}`}>{message.from}: {message.body}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className='border-t-2 flex items-center py-4 px-2'>
+            <input type="text" placeholder='Mensaje' className='flex-1 rounded-lg px-4 py-2 border-2 mr-2'
+              onChange={(e) => setMessage(e.target.value)}></input>
+            <button className='relative right-16'>Enviar</button>
+          </div>
+
+
         </form>
       </div>
     </>
