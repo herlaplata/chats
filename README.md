@@ -7,6 +7,7 @@ _El proyecto es una aplicación de chat en tiempo real de alto rendimiento. Util
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 Mira **Deployment** para conocer como desplegar el proyecto.
+[SOCKETS.pptx](https://github.com/user-attachments/files/25615004/SOCKETS.pptx)
 
 
 ### Pre-requisitos 📋
@@ -42,8 +43,7 @@ Hernan M.
 
 * **Hernan Mamani** - *Trabajo Inicial* - [Hernan m.](https://github.com/herlaplata)
 
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+ 
 
 ## Licencia 📄
 
