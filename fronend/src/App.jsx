@@ -50,7 +50,7 @@ function App() {
             <ul>
               {messages.map((message, i) => (
                 <li key={i}
-                  className={`{my-4 p-2 table text-sm rounded-md mb-2 text-white ${message.from == 'Me' ? `bg-blue-500` : `bg-gray-500 ml-auto`}`}>{message.from}: {message.body}</li>
+                  className={`{my-4 p-2 table text-sm rounded-md mb-2 text-white max-w-2/3 ${message.from == 'Me' ? `bg-blue-500` : `bg-gray-500 ml-auto`}`}>{message.from}: {message.body}</li>
               ))}
             </ul>
           </div>
