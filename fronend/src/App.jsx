@@ -22,6 +22,7 @@ function App() {
 
     setMessages([...messages, newMessage])
     socket.emit('message', message);
+    setMessage("");
   };
 
   useEffect(() => {
@@ -41,11 +42,11 @@ function App() {
         <form onSubmit={handleSubmit} className='bg-white shadow-lg rounded-lg max-w-md'>
           <div className='border-b-1 px-2 py-4'>
             <div className='inline-flex items-center'>
-              <img src="https://images.seeklogo.com/logo-png/27/1/snap-svg-logo-png_seeklogo-273905.png" alt="Logo" className='w-8' />
+              <img src={viteLogo} alt="Logo" className='w-8' />
               <span className='ml-8'>Chat</span>
             </div>
           </div>
-          <div className='h-80 flex flex-col mex-w-md px-2 mb-2  mt-2'>
+          <div className='h-80 flex flex-col mex-w-md px-2 mb-2  mt-2 overflow-y-auto'>
             <ul>
               {messages.map((message, i) => (
                 <li key={i}
@@ -54,8 +55,8 @@ function App() {
             </ul>
           </div>
 
-          <div className='border-t-2 flex items-center py-4 px-2'>
-            <input type="text" placeholder='Mensaje' className='flex-1 rounded-lg px-4 py-2 border-2 mr-2'
+          <div className='border-t-1 flex items-center py-4 px-2'>
+            <input type="text" value={message} placeholder='Mensaje' className='flex-1 rounded-lg px-4 py-2 border-2 mr-2'
               onChange={(e) => setMessage(e.target.value)}></input>
             <button className='relative right-16'>Enviar</button>
           </div>

@@ -13,7 +13,7 @@ io.on('connection', socket => {
         console.log(body)
         socket.broadcast.emit('message', {
             body,
-            from: socket.id.slice(6)
+            from: socket.id.slice(0, 5)
         })
     })
 })
